@@ -4,10 +4,11 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
-var apiRoutes = require('./routes/api');
 var http = require('http');
 var path = require('path');
+
+var routes = require('./routes');
+var apiRoutes = require('./routes/api');
 
 var app = express();
 
@@ -27,6 +28,10 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
+app.get('/api/generate', apiRoutes.generate);
+app.get('/f/:name', apiRoutes.getStoredImage);
+app.post('/api/store', apiRoutes.store);
+
 app.get('/', function(req, res) {
   if (req.query.url) {
     res.redirect('/api/generate?url=' + req.query.url);
@@ -34,7 +39,6 @@ app.get('/', function(req, res) {
     return routes.index(req, res);
   }
 });
-app.get('/api/generate', apiRoutes.generate);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));

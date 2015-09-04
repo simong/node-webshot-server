@@ -1,33 +1,34 @@
 {
-    "name": "webshots",
-    "version": "0.0.1",
-    "description": "Takes webshots",
-    "main": "server.js",
-    "dependencies": {
-        "flatiron": "~0.3.8",
-        "nodemon": "~0.7.10",
-        "union": "~0.3.7",
-        "webshot": "~0.5.1",
-        "express": "3.4.3",
-        "temp": "0.6.0",
-        "ejs": "*"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:okfn/webshot"
-    },
-    "author": "Oliver Searle-Barnes",
-    "license": "BSD",
-    "bugs": {
-        "url": "https://github.com/okfn/webshot/issues"
-    },
-    "engines": {
-        "node": "0.10.x",
-        "npm": "1.2.x"
-    }
+  "name": "webshots",
+  "version": "0.0.1",
+  "description": "Takes webshots",
+  "main": "server.js",
+  "dependencies": {
+    "aws-sdk": "^2.1.50",
+    "ejs": "*",
+    "express": "3.4.3",
+    "flatiron": "~0.3.8",
+    "nodemon": "~0.7.10",
+    "temp": "0.6.0",
+    "union": "~0.3.7",
+    "webshot": "~0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:okfn/webshot"
+  },
+  "author": "Oliver Searle-Barnes",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/okfn/webshot/issues"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
 }

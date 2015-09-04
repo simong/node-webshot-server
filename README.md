@@ -13,6 +13,9 @@ Originally forked from [opsb/node-webshot-server](https://github.com/opsb/node-w
 ## Heroku
 
     $ heroku create [name]
+    $ heroku config:add AWS_ACCESS_KEY_ID=<......>
+    $ heroku config:add AWS_SECRET_ACCESS_KEY=<......>
+    $ heroku config:add AWS_S3_BUCKET=<......>
     $ heroku config:add LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib:/app/vendor/phantomjs/lib
     $ heroku config:add PATH=/usr/local/bin:/usr/bin:/bin:/app/vendor/phantomjs/bin
     $ git push heroku master
